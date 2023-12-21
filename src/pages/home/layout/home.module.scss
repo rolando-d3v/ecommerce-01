@@ -1,0 +1,30 @@
+.home {
+  width: 100%;
+  background-color: var(--color-secundario01);
+}
+
+.content_img {
+  padding: 40px 80px;
+  width: 100%;
+  
+  .div_img {
+    min-height: 400px;
+    height: 75vh;
+    .item_img {
+      // width: 100%;
+      // min-height: 50%;
+      // max-height: 800px;
+
+      .img_cover {
+       background-position: center;
+       background-size: cover;
+        width: 100%;
+        height: 100%;
+
+        // @media screen and (min-height: 1000px) {
+        //   width: 20%;
+        // }
+      }
+    }
+  }
+}

@@ -1,21 +1,21 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { setupListeners } from "@reduxjs/toolkit/query/react";
-// import { apiDocumento } from "./apis/apiDocumento";
+// import { setupListeners } from "@reduxjs/toolkit/query/react";
 
 
-import baseStyleSlice from "./baseStyleSlice";
-import perSisRolStyleSlice from "./perSisRolSlice";
+import usuarioAuthSlice from "./usuarioAuthSlice";
+import settingAppSlice from "./settingAppSlice";
+
 
 
 export const store = configureStore({
   reducer: {
 
-    baseStyle: baseStyleSlice,
-    perSisRolStyle: perSisRolStyleSlice,
+    SETTING_APP: settingAppSlice,
+    USER_AUTH: usuarioAuthSlice,
   }
   // middleware: (getDefaultMiddleware) =>
   //   getDefaultMiddleware().concat(apiDocumento.middleware),
 
 });
 
-setupListeners(store.dispatch);
+// setupListeners(store.dispatch);

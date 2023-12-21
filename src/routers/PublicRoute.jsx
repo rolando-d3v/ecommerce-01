@@ -3,7 +3,7 @@ import { Navigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const PublicRoute = ({ children }) => {
-  const {auth} = useSelector((state) => state.perSisRolStyle);
+  const { auth, roles_user } = useSelector((state) => state.USER_AUTH);
 
   return !auth ? children : <Navigate to="/home" />  
 };

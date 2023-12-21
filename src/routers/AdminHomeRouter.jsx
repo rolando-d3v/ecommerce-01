@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 // import { motion } from "framer-motion";
 // import css from "./homeRouter.module.scss";
 import LayoutProductos from "../pages_admin/productos/LayoutProductos";
+import LayoutUser from "../pages_admin/user/layoutUser";
 
 
 export default function AdminHomeRouter() {
@@ -15,8 +16,13 @@ export default function AdminHomeRouter() {
       //  ${isDarkMode ? css.principalDark : css.principalDia} `}
     >
 
+      <div>
+        hola Admin
+      </div>
+
        <Routes>
-          <Route path="/documentos-recibidos" element={<LayoutProductos />} />
+          <Route path="/productos" element={<LayoutProductos />} />
+          <Route path="/user" element={<LayoutUser />} />
         </Routes>
    
 

@@ -16,8 +16,8 @@ const initialState = {
 
 
 
-export const baseStyleSlice = createSlice({
-  name: "baseStyle",
+const settingAppSlice = createSlice({
+  name: "settingAppSlice",
   initialState,
 
   reducers: {
@@ -53,6 +53,6 @@ export const {
   xopenModalJefe,
   url_docx,
   toggleDarkMode,
-} = baseStyleSlice.actions;
+} = settingAppSlice.actions;
 
-export default baseStyleSlice.reducer;
+export default settingAppSlice.reducer;

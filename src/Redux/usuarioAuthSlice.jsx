@@ -6,7 +6,10 @@ const initialState = {
   opciones_select: null,
   nivel3_select: null,
   nivel1_select: null,
+  // auth: true,
   auth: null,
+  // roles_user: ["user"],
+  roles_user: [],
   dni: null,
   personal: null,
   sistema_role_opciones: null,
@@ -19,8 +22,8 @@ const initialState = {
   sistema: 1,
 };
 
-export const perSisRolSlice = createSlice({
-  name: "perSisRol",
+export const usuarioSlice = createSlice({
+  name: "usuarioAuthSlice",
   initialState,
 
   reducers: {
@@ -83,6 +86,6 @@ export const {
   xdefault_nivel_1,
   xdefault_role,
   xdefault_opciones
-} = perSisRolSlice.actions;
+} = usuarioSlice.actions;
 
-export default perSisRolSlice.reducer;
+export default usuarioSlice.reducer;

@@ -1,22 +1,32 @@
 import React from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-const PrivateRoute = ({ children }) => {
-  //path de la pagina que navegas para logear y regresar a la misma pagina
-  // localStorage.setItem("lastpath", rest.location.pathname);
+export const PrivateRouteUser = ({ children }) => {
+  const { auth, roles_user } = useSelector((state) => state.USER_AUTH);
 
-  const {auth} = useSelector((state) => state.perSisRolStyle);
-
-  return auth ? children : <Navigate to="/login" />;
+  const isAuth = !!auth && roles_user.includes("user");
+  console.log(isAuth);
+  if (!isAuth) {
+    return <Navigate to="/login" replace />;
+  }
+  return children ? children : <Outlet />;
 };
 
-export default PrivateRoute;
 
 
 
+export const PrivateRouteAdmin = ({ children }) => {
+  const { auth, roles_user } = useSelector((state) => state.USER_AUTH);
 
+  console.log(auth, roles_user);
 
+  if (!auth) {
+    return <Navigate to="/login" replace />;
+  }
+  if (!roles_user.includes("admin")) {
+    return <Navigate to="/home" replace />;
+  }
 
-
-
+  return children ? children : <Outlet />;
+};
