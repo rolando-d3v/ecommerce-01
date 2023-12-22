@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import { Navigation, Pagination, History } from "swiper/modules";
+import { Navigation, Pagination, History, Autoplay } from "swiper/modules";
 
 const arrayImg = [
   { id: 1, img: wall01 },
@@ -31,18 +31,17 @@ export default function LayoutHome() {
             clickable: true,
           }}
           autoplay={{
-            delay: 2500,
+            delay: 3000,
             disableOnInteraction: false,
           }}
-          modules={[Navigation, Pagination, History]}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
+          modules={[Navigation, Autoplay, Pagination, History]}
+          // onSlideChange={() => console.log("slide change")}
+          // onSwiper={(swiper) => console.log(swiper)}
         >
-          {arrayImg.map((li) => {
+          {arrayImg.map((li, index) => {
             return (
-              <SwiperSlide className={css.item_img}>
-                <div style={{ backgroundImage: `url(${li.img})`}} className={css.img_cover}  >fff</div>
-                {/* <img src={li.img} alt="img" className={css.img_cover} /> */}
+              <SwiperSlide  key={index} className={css.item_img}>
+                <div style={{ backgroundImage: `url(${li.img})`}} className={css.img_cover}  ></div>
               </SwiperSlide>
             );
           })}

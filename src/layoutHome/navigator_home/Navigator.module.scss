@@ -23,7 +23,7 @@
   }
   .navigation02 {
     img {
-      width: 100px;
+      width: 110px;
     }
   }
   .navigation03 {
@@ -32,6 +32,7 @@
 
     .icon_item {
       font-size: 23px;
+      cursor: pointer;
       &:not(:first-child) {
         margin-left: 24px;
       }
@@ -42,6 +43,7 @@
       font-size: 0.75rem;
       letter-spacing: 1.7px;
       font-weight: 700;
+      cursor: pointer;
       //   text-transform: uppercase;
       &:not(:first-child) {
         margin-left: 18px;

@@ -15,9 +15,9 @@ export default function Navigator() {
   return (
     <header className={css.header}>
       <nav className={css.navigation01}>
-        {list01.map((li) => {
+        {list01.map((li, index) => {
           return (
-            <Link to={li.url} className={css.link_item}>
+            <Link key={index}  to={li.url} className={css.link_item}>
               <span> {li.name} </span>
             </Link>
           );
