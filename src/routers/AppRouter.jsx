@@ -13,6 +13,9 @@ import HomeRouter from "./HomeRouter";
 import Navigator from "../layoutHome/navigator_home/Navigator";
 import LayoutHome from "../pages/home/layout/LayoutHome";
 import { useSelector } from "react-redux";
+import LayoutHombre from "../pages/page_hombre/layout/LayoutHombre";
+import LayoutMujer from "../pages/page_mujer/layout/LayoutMujer";
+import LayoutNinos from "../pages/page_ninos/layout/LayoutNinos";
 // import PublicRoute from "./PublicRoute";
 
 export default function AppRouter() {
@@ -28,6 +31,9 @@ export default function AppRouter() {
         <Route index element={<LayoutHome />} />
         <Route path="/home" element={<LayoutHome />} />
         <Route path="/login" element={<LayoutLogin />} />
+        <Route path="/hombre" element={<LayoutHombre />} />
+        <Route path="/mujer" element={<LayoutMujer />} />
+        <Route path="/ninos" element={<LayoutNinos />} />
 
         <Route
           path="/user/*"

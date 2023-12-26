@@ -1,0 +1,51 @@
+.registro {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+
+  @media screen and (max-width: 950px) {
+    width: 100%;
+  }
+
+  .title {
+    font-weight: 200;
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .form_registro {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+
+    .title {
+      font-weight: 200;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+  
+    .label {
+      margin-bottom: 3px;
+    }
+    .item_input {
+      margin-bottom: 10px;
+      height: 36px;
+      padding:  4px 10px;
+    }
+    .item_input_submit {
+      margin-top: 20px;
+      height: 42px;
+      background-color: black;
+      color: white;
+      cursor: pointer;
+    }
+
+    .label_obliga {
+      margin-top: 10px;
+    }
+  }
+  
+}
+
+

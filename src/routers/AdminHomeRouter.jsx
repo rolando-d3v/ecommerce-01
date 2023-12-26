@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 // import { motion } from "framer-motion";
 // import css from "./homeRouter.module.scss";
 import LayoutProductos from "../pages_admin/productos/LayoutProductos";
-import LayoutUser from "../pages_admin/user/layoutUser";
+
 
 
 export default function AdminHomeRouter() {
@@ -22,7 +22,7 @@ export default function AdminHomeRouter() {
 
        <Routes>
           <Route path="/productos" element={<LayoutProductos />} />
-          <Route path="/user" element={<LayoutUser />} />
+          {/* <Route path="/user" element={<LayoutUser />} /> */}
         </Routes>
    
 

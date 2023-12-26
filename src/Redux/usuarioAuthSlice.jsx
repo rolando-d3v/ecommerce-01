@@ -27,49 +27,12 @@ export const usuarioSlice = createSlice({
   initialState,
 
   reducers: {
-    personal: (state, action) => {
-      state.personal = action.payload;
-      state.dni = action.payload.ID_DNI_C;
-    },
-    xsistema_role_opciones: (state, action) => {
-      state.sistema_role_opciones = action.payload;
-    },
-    nivel1_nivel3: (state, action) => {
-      state.nivel1 = action.payload.ARRAY_NIVEL1;
-      state.nivel3 = action.payload.ARRAY_NIVEL3;
-    },
-
     login_true: (state, action) => {
       state.auth = action.payload;
     },
-
-    xdefault_nivel_3: (state, action) => {
-      state.default_nivel3 = action.payload;
-    },
-    xdefault_nivel_1: (state, action) => {
-      state.default_nivel1 = action.payload;
-    },
-    xdefault_role: (state, action) => {
-      state.default_role = action.payload;
-    },
-    xdefault_opciones: (state, action) => {
-      state.default_opciones = action.payload;
-    },
-    xselect: (state, action) => {
-      state.personal_select = action.payload.personal;
-      state.role_select = action.payload.role;
-      state.opciones_select = action.payload.arrayOpciones;
-      state.nivel3_select = action.payload.nivel3;
-      state.nivel1_select = action.payload.nivel1;
-    },
-
+   
     login_false: (state, action) => {
       state.auth = null;
-      state.personal = null;
-      state.nivel3 = null;
-      state.nivel1 = null;
-      state.sistema_role_opciones = null;
-    
       sessionStorage.removeItem("TK")
     },
   },
