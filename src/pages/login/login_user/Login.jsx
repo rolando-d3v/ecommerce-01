@@ -3,8 +3,18 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import css from "./loginUser.module.scss";
+import { toast } from "sonner";
+import { useDispatch } from "react-redux";
+import {
+  xlogin_true,
+  xpersonal,
+  xroles_user,
+} from "../../../Redux/usuarioAuthSlice";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
+  const navigate = useNavigate();
+
   const schema = z.object({
     email: z
       .string()
@@ -29,8 +39,34 @@ export default function Login() {
   });
   console.log(errors);
 
+  const dispatch = useDispatch();
+
   const enviarData = (data) => {
+    const role = "user";
+
     console.log(data);
+    sessionStorage.setItem("TK_ECO", JSON.stringify(data));
+
+    dispatch(xlogin_true(true));
+    dispatch(xpersonal(data));
+    // dispatch(xroles_user(["user"]));
+    dispatch(xroles_user([`${role}`]));
+
+    toast("Login", {
+      className: "my-classname",
+      description: "Exitoso",
+      duration: 1500,
+      position: "top-center",
+      style: {
+        background: "#000",
+        color: "white",
+      },
+      // icon: <MyIcon />,
+    });
+
+    {
+      role === "admin" ? navigate("/admin/productos") : navigate("/user/pagos");
+    }
   };
 
   return (
@@ -42,12 +78,7 @@ export default function Login() {
       <h1 className={css.title}>Login</h1>
 
       <label className={css.label}>Email</label>
-      <input
-        type="email"
-        {...register("email")}
-        
-        className={css.item_input}
-      />
+      <input type="email" {...register("email")} className={css.item_input} />
 
       {errors.email && <span>email es requerido </span>}
 
@@ -55,11 +86,10 @@ export default function Login() {
       <input
         type="password"
         {...register("password")}
-     
         className={css.item_input}
       />
 
-{errors.password && <span>Password es requerido </span>}
+      {errors.password && <span>Password es requerido </span>}
 
       <input type="submit" className={css.item_input_submit} />
 

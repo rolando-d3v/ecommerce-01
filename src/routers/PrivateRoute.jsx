@@ -21,10 +21,18 @@ export const PrivateRouteAdmin = ({ children }) => {
 
   console.log(auth, roles_user);
 
-  if (!auth) {
-    return <Navigate to="/login" replace />;
-  }
-  if (!roles_user.includes("admin")) {
+  // if (!auth) {
+  //   return <Navigate to="/login" replace />;
+  // }
+  // if (!roles_user.includes("admin")) {
+  //   return <Navigate to="home" replace />;
+  // }
+
+
+
+  const isAuth = !!auth && roles_user.includes("admin");
+  console.log(isAuth);
+  if (!isAuth) {
     return <Navigate to="/home" replace />;
   }
 

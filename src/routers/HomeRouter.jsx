@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import LayoutPagos from "../pages_user/pagos/LayoutPagos";
+import LayoutUser from "../pages_user/user/LayoutUser";
 
 export default function HomeRouter() {
   // const { estado_sidebar, isDarkMode } = useSelector(
@@ -20,6 +21,10 @@ export default function HomeRouter() {
       <SidebarCentroM /> */}
       <Routes>
         <Route path="/pagos" element={<LayoutPagos />} />
+        <Route path="/data-user" element={<LayoutUser />} />
+        {/* <Route path="/user/*" element={<Navigate to="/pagos" />} /> */}
+        {/* <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Navigate to="/home" />} /> */}
       </Routes>
     </div>
   );
