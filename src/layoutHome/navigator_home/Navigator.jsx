@@ -58,8 +58,11 @@ export default function Navigator() {
             onClick={() => dispatch(xlogin_false())}
           />
         )}
-        <Link to="/user/pagos" className={css.link_item}>
+        <Link to="/carrito" className={css.link_item}>
           <FaIcons.FaCartShopping className={css.icon_item} />
+        </Link>
+        <Link to="/user/pagos" className={css.link_item}>
+          <FaIcons.FaPaypal className={css.icon_item} />
         </Link>
         {/* <Link to="/login">Login</Link> */}
         {/* <Link to="/home">Home</Link>

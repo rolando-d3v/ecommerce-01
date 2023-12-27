@@ -23,7 +23,8 @@ export default function Login() {
     password: z
       .string()
       .min(1, { message: "El campo password es obligatorio" }),
-    campo: z.string().min(1, { message: "El campo email es obligatorio" }),
+    role: z.string().min(1, { message: "El campo email es obligatorio" }),
+    nombre: z.string().min(1, { message: "El campo email es obligatorio" }),
   });
 
   const {
@@ -34,7 +35,8 @@ export default function Login() {
     getValues,
     formState: { errors },
   } = useForm({
-    defaultValues: { campo: "prueba2023" },
+    // defaultValues: { role: "admin" },
+    defaultValues: { role: "user", nombre: "rolando" },
     resolver: zodResolver(schema),
   });
   console.log(errors);
@@ -42,15 +44,18 @@ export default function Login() {
   const dispatch = useDispatch();
 
   const enviarData = (data) => {
-    const role = "user";
+    // const role = "user";
 
+    console.log(data.role);
     console.log(data);
+
     sessionStorage.setItem("TK_ECO", JSON.stringify(data));
 
     dispatch(xlogin_true(true));
     dispatch(xpersonal(data));
-    // dispatch(xroles_user(["user"]));
-    dispatch(xroles_user([`${role}`]));
+    dispatch(xroles_user([`${data.role}`]));
+
+
 
     toast("Login", {
       className: "my-classname",
@@ -65,7 +70,9 @@ export default function Login() {
     });
 
     {
-      role === "admin" ? navigate("/admin/productos") : navigate("/user/pagos");
+      data.role === "admin"
+        ? navigate("/admin/productos")
+        : navigate("/user/pagos");
     }
   };
 

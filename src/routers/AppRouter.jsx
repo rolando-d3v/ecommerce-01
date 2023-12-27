@@ -16,6 +16,7 @@ import { useSelector } from "react-redux";
 import LayoutHombre from "../pages/page_hombre/layout/LayoutHombre";
 import LayoutMujer from "../pages/page_mujer/layout/LayoutMujer";
 import LayoutNinos from "../pages/page_ninos/layout/LayoutNinos";
+import LayoutCarrito from "../pages/pages_carrito/layout_car/LayoutCarrito";
 // import PublicRoute from "./PublicRoute";
 
 export default function AppRouter() {
@@ -34,6 +35,7 @@ export default function AppRouter() {
         <Route path="/hombre" element={<LayoutHombre />} />
         <Route path="/mujer" element={<LayoutMujer />} />
         <Route path="/ninos" element={<LayoutNinos />} />
+        <Route path="/carrito" element={<LayoutCarrito />} />
 
         <Route
           path="/user/*"

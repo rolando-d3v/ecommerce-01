@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "name": "Tree Dasher 2 - Hombre",
+        "author": "Allbird",
+        "imageUrl": "/hombre/man01.png",
+        "price": "54"
+    },
+    {
+        "id": 2,
+        "name": "JavaScript and jQuery: Interactive Front-End Web Development",
+        "author": "Allbird",
+        "imageUrl": "/hombre/man02.png",
+        "price": "23"
+    },
+    {
+        "id": 3,
+        "name": "Beginning ReactJS Foundations Building User Interfaces with ReactJS: An Approachable Guide",
+        "author": "Allbird",
+        "imageUrl": "/hombre/man03.png",
+        "price": "32"
+    },
+    {
+        "id": 4,
+        "name": "React Key Concepts: Consolidate your knowledge of React's core features",
+        "author": "Maximilian Schwarzmüller",
+        "imageUrl": "/hombre/man04.png",
+        "price": "45"
+    },
+    {
+        "id": 5,
+        "name": "Beginning Node.js, Express & MongoDB Development",
+        "author": "Allbird",
+        "imageUrl": "/hombre/man05.png",
+        "price": "18"
+    },
+    {
+        "id": 6,
+        "name": "Beginning MERN Stack: Build and Deploy a Full Stack MongoDB, Express, React, Node.js App",
+        "author": "Allbird",
+        "imageUrl": "/hombre/man06.png",
+        "price": "18"
+    },
+    {
+        "id": 7,
+        "name": "Beginning React (incl. Redux and React Hooks)",
+        "author": "Allbird",
+        "imageUrl": "/hombre/man07.png",
+        "price": "16"
+    }
+]

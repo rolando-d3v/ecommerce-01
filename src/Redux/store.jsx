@@ -4,6 +4,7 @@ import { configureStore } from "@reduxjs/toolkit";
 
 import usuarioAuthSlice from "./usuarioAuthSlice";
 import settingAppSlice from "./settingAppSlice";
+import cartSlice from "./cartSlice";
 
 
 
@@ -12,6 +13,7 @@ export const store = configureStore({
 
     SETTING_APP: settingAppSlice,
     USER_AUTH: usuarioAuthSlice,
+    CART_APP: cartSlice,
   }
   // middleware: (getDefaultMiddleware) =>
   //   getDefaultMiddleware().concat(apiDocumento.middleware),
