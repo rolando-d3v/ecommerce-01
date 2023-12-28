@@ -6,6 +6,8 @@
   align-items: center;
   height: 60px;
   padding: 0 36px;
+  box-shadow: 0 0 50px 0px #00000029;
+  // box-shadow: 0 0 1px rgb(0 0 0 / 13%), 0 1px 3px rgb(0 0 0 / 20%);
 
   .navigation01 {
     display: flex;
@@ -46,7 +48,32 @@
       cursor: pointer;
       //   text-transform: uppercase;
       &:not(:first-child) {
-        margin-left: 18px;
+        margin-left: 20px;
+      }
+    }
+    .link_item_carrito {
+      text-decoration: none;
+      font-size: 0.75rem;
+      letter-spacing: 1.7px;
+      font-weight: 700;
+      cursor: pointer;
+      position: relative;
+      &:not(:first-child) {
+        margin-left: 16px;
+      }
+
+      .icon_numero {
+        position: absolute;
+        background-color: rgb(11, 193, 74);
+        color: white;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        top: -10px;
+        right: -14px;
+        font-size: 10px;
       }
     }
   }

@@ -90,7 +90,7 @@ export default function Registro() {
 
         <input
           type="submit"
-          value="Register"
+          value="Registrarse"
           className={css.item_input_submit}
         />
 

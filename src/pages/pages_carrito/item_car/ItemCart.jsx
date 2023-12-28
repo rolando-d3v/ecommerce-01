@@ -26,15 +26,17 @@ export default function ItemCart({ data }) {
   }, [quantity, data?.price, data?.id, dispatch]);
 
   return (
-    <tr>
-      <td style={{ maxWidth: 450, textAlign: "left" }}>
-        <div className="d-flex align-items-center">
-          <img src={data.imageUrl} alt="" style={{ width: 100 }} />
-          <p style={{ marginLeft: 10 }}>{data.name}</p>
+    <tr className={css.content_body}>
+      <td className={css.descripcion}>
+        <div className={css.img_pro}>
+          <img src={data.imageUrl} alt="img" />
+          <p>{data.name}</p>
         </div>
       </td>
+
       <td className={css.price}>{data.price}$</td>
-      <td>
+
+      <td className={css.cantidad}>
         <div className="d-flex align-items-center justify-content-center">
           <button
             className={css.changeBtn}
@@ -60,11 +62,12 @@ export default function ItemCart({ data }) {
           </button>
         </div>
       </td>
+
       <td className={css.price} style={{ fontWeight: "bold" }}>
         {totalPrice}$
       </td>
-      <td>
-        <button variant="danger" onClick={handleRemove}>
+      <td className={css.accion}>
+        <button className={css.btn_delete} onClick={handleRemove}>
           <FaTrashAlt />
         </button>
       </td>
