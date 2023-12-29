@@ -32,6 +32,11 @@
     display: flex;
     align-items: center;
 
+    @media screen and (max-width: 690px) {
+      display: none;
+      
+    }
+
     .icon_item {
       font-size: 23px;
       cursor: pointer;

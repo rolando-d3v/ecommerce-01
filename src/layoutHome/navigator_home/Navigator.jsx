@@ -34,6 +34,8 @@ export default function Navigator() {
           <img src={logo} alt="logo" />
         </Link>
       </nav>
+
+      
       <nav className={css.navigation03}>
         <Link to="/comentarios" className={css.link_item}>
           COMENTARIOS

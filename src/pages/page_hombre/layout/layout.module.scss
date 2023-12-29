@@ -4,6 +4,15 @@
   display: grid;
   grid-template-areas: "ASIDE  CONTENT";
   grid-template-columns: 311px 1fr;
+  
+  
+  @media screen and (max-width: 690px) {
+    display: grid;
+    grid-template-areas: "CONTENT";
+    grid-template-columns: 1fr;
+  
+    
+  }
 }
 
 .aside {
@@ -35,6 +44,12 @@
     color: #0000008d;
     text-align: justify;
   }
+
+
+  @media screen and (max-width: 690px) {
+    display: none;
+    
+  }
 }
 
 .content {
@@ -44,5 +59,5 @@
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   justify-content: center;
   gap: 14px;
-  //   margin: 20px 0;
+
 }

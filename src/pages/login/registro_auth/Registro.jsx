@@ -45,7 +45,7 @@ export default function Registro() {
 
   return (
     <div className={css.registro}>
-      <h1 className={css.title}>Create an Account</h1>
+      <h1 className={css.title}>Crear cuenta</h1>
 
       <form
         className={css.form_registro}
