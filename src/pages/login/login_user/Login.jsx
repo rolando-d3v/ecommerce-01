@@ -35,7 +35,7 @@ export default function Login() {
     getValues,
     formState: { errors },
   } = useForm({
-    // defaultValues: { role: "admin" },
+    // defaultValues: { role: "admin", nombre: "rolando" },
     defaultValues: { role: "user", nombre: "rolando" },
     resolver: zodResolver(schema),
   });
