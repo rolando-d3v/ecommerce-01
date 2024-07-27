@@ -1,0 +1,56 @@
+.promo_id {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+
+  .content {
+    display: flex;
+    max-width: var(--desktop-lg);
+
+    .img {
+        border-radius: 16px;
+        width: 65%;
+    }
+    
+    .content_text {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        align-items: start;
+        justify-content: center;
+
+
+        .title {
+            font-size: 4rem;
+            font-weight: 500;
+        }
+        .description {
+            color: #717171;
+
+        }
+        .oferta {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+        .porcentaje {
+            font-size: 3rem;
+        }
+    }
+
+
+    @media (width < 900px) {
+        flex-direction: column-reverse;
+	
+
+        .img {
+            width: 100%;
+        }
+
+        .content_text {
+            width: 100%;
+        }
+    }
+    
+  }
+}

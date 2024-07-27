@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Route, Routes, Navigate, useLocation } from "react-router-dom";
+import { Route, Routes, Navigate, useLocation, Outlet } from "react-router-dom";
 import { useSelector } from "react-redux";
 import LayoutPagos from "../pages_user/pagos/LayoutPagos";
 import LayoutUser from "../pages_user/user/LayoutUser";
@@ -11,12 +11,12 @@ import LayoutMujer from "../pages/page_mujer/layout/LayoutMujer";
 import LayoutNinos from "../pages/page_ninos/layout/LayoutNinos";
 import LayoutCarrito from "../pages/pages_carrito/layout_car/LayoutCarrito";
 import { PrivateRouteUser } from "./PrivateRoute";
+import Footer from "../layoutHome/footer_page/Footer";
 
 export default function HomeRouter() {
   // const { estado_sidebar, isDarkMode } = useSelector(
   //   (state) => state.baseStyle
   // );
-  const { auth, roles_user } = useSelector((state) => state.USER_AUTH);
 
   return (
     <div
@@ -46,7 +46,11 @@ export default function HomeRouter() {
             </PrivateRouteUser>
           }
         />
+
+        <Route path="*" element={<h1>404</h1>} />
       </Routes>
+
+      <Footer />
     </div>
   );
 }
@@ -61,3 +65,5 @@ function UserRouter() {
     </div>
   );
 }
+
+

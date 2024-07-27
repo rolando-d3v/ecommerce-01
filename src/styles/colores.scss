@@ -1,4 +1,12 @@
-:root{
-   --color-primario01: #fefffe;
-   --color-secundario01: #eee ;
+:root {
+  --color-primario01: #fefffe;
+  --color-secundario01: #eee;
+
+  //   responsive
+  --phone-sm: 320px;
+  --phone-md: 480px;
+  --tablet-sm: 768px;
+  --tablet-md: 1024px;
+  --desktop-lg: 1280px;
+  --desktop-xl: 1440px;
 }

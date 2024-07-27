@@ -40,6 +40,7 @@ export default function AppRouter() {
           }
         />
       </Routes>
+  
     </BrowserRouter>
 
     // <BrowserRouter>

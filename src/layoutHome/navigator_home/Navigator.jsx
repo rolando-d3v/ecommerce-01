@@ -20,59 +20,62 @@ export default function Navigator() {
 
   return (
     <header className={css.header}>
-      <nav className={css.navigation01}>
-        {list01.map((li, index) => {
-          return (
-            <Link key={index} to={li.url} className={css.link_item}>
-              <span> {li.name} </span>
+      <div className={css.content_header}  >
+        <nav className={css.navigation_logo}>
+          <Link to="/home">
+            <img src={logo} alt="logo" />
+          </Link>
+        </nav>
+
+        <div className={css.content_navegation}>
+          <nav className={css.navigation_links}>
+            {list01.map((li, index) => {
+              return (
+                <Link key={index} to={li.url} className={css.link_item}>
+                  <span> {li.name} </span>
+                </Link>
+              );
+            })}
+          </nav>
+
+          <nav className={css.navigation03}>
+            <Link to="/comentarios" className={css.link_item}>
+              COMENTARIOS
             </Link>
-          );
-        })}
-      </nav>
-      <nav className={css.navigation02}>
-        <Link to="/home">
-          <img src={logo} alt="logo" />
-        </Link>
-      </nav>
+            <FaIcons.FaMagnifyingGlass className={css.icon_item} />
 
-      
-      <nav className={css.navigation03}>
-        <Link to="/comentarios" className={css.link_item}>
-          COMENTARIOS
-        </Link>
-        <FaIcons.FaMagnifyingGlass className={css.icon_item} />
+            {auth === true ? (
+              <Link to="/user/data-user" className={css.link_item}>
+                <FaIcons.FaUser className={css.icon_item} />
+              </Link>
+            ) : (
+              <Link to="/login" className={css.link_item}>
+                <FaIcons.FaUser className={css.icon_item} />
+              </Link>
+            )}
 
-        {auth === true ? (
-          <Link to="/user/data-user" className={css.link_item}>
-            <FaIcons.FaUser className={css.icon_item} />
-          </Link>
-        ) : (
-          <Link to="/login" className={css.link_item}>
-            <FaIcons.FaUser className={css.icon_item} />
-          </Link>
-        )}
+            {auth === true && (
+              <FaIcons.FaPowerOff
+                className={css.icon_item}
+                onClick={() => dispatch(xlogin_false())}
+              />
+            )}
+            <Link to="/carrito" className={css.link_item_carrito}>
+              <FaIcons.FaCartShopping className={css.icon_item} />
+              <span className={css.icon_numero}> {list.length} </span>
+            </Link>
 
-        {auth === true && (
-          <FaIcons.FaPowerOff
-            className={css.icon_item}
-            onClick={() => dispatch(xlogin_false())}
-          />
-        )}
-        <Link to="/carrito" className={css.link_item_carrito}>
-          <FaIcons.FaCartShopping className={css.icon_item} />
-          <span className={css.icon_numero}  > {list.length} </span>
-        </Link>
-
-
-        <Link to="/user/pagos" className={css.link_item}>
-          <FaIcons.FaPaypal className={css.icon_item} />
-        </Link>
-        {/* <Link to="/login">Login</Link> */}
-        {/* <Link to="/home">Home</Link>
+            <Link to="/user/pagos" className={css.link_item}>
+              <FaIcons.FaPaypal className={css.icon_item} />
+            </Link>
+            {/* <Link to="/login">Login</Link> */}
+            {/* <Link to="/home">Home</Link>
         <Link to="/user/pagos">user pagos</Link>
         <Link to="/admin/user">Admin user</Link>
         <Link to="/admin/productos">Admin productos</Link> */}
-      </nav>
+          </nav>
+        </div>
+      </div>
     </header>
   );
 }

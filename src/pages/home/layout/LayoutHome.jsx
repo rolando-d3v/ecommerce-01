@@ -9,6 +9,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { Navigation, Pagination, History, Autoplay } from "swiper/modules";
+import PromocionesAll from "../promociones_all/PromocionesAll";
+import PromocionesId from "../promociones_id/PromocionesId";
 
 const arrayImg = [
   { id: 1, img: wall01 },
@@ -47,6 +49,9 @@ export default function LayoutHome() {
           })}
         </Swiper>
       </article>
+
+      <PromocionesAll/>
+      <PromocionesId/>
     </section>
   );
 }
