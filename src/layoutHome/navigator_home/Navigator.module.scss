@@ -1,8 +1,11 @@
 .header {
   width: 100%;
   // background-color: var(--color-primario01);
-  background-color: transparent;
-  background-color: #7f7f7f;
+  background-color: rgb(67, 19, 255);
+
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(15px);
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,105 +18,106 @@
   // box-shadow: 0 0 50px 0px #00000029;
   // box-shadow: 0 0 1px rgb(0 0 0 / 13%), 0 1px 3px rgb(0 0 0 / 20%);
 
-.content_header {
-  display: flex;
-  width: 100%;
-  max-width: var(--desktop-lg);
-  margin: 0 auto;
-
-
-  .navigation_logo {
-    margin-right: 20px;
-    img {
-      width: 100px;
-    }
-  }
-
-
-
-  .content_navegation {
-
+  .content_header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 100%;
-    
-  }
+    max-width: var(--desktop-lg);
+    margin: 0 auto;
 
-
-  .navigation_links {
-    display: flex;
-
-    .link_item {
-      text-decoration: none;
-      font-size: 0.75rem;
-      letter-spacing: 1.7px;
-      font-weight: 700;
-      color: white;
-      //   text-transform: uppercase;
-      &:not(:first-child) {
-        margin-left: 18px;
-      }
-    }
-  }
-  .navigation03 {
-    display: flex;
-    align-items: center;
-
-    @media screen and (max-width: 690px) {
-      display: none;
-      
-    }
-
-    .icon_item {
-      font-size: 23px;
-      cursor: pointer;
-      color: white;
-      &:not(:first-child) {
-        margin-left: 24px;
+    .navigation_logo {
+      margin-right: 20px;
+      img {
+        width: 100px;
       }
     }
 
-    .link_item {
-      text-decoration: none;
-      font-size: 0.75rem;
-      letter-spacing: 1.7px;
-      font-weight: 700;
-      color: white;
-      cursor: pointer;
-      //   text-transform: uppercase;
-      &:not(:first-child) {
-        margin-left: 20px;
-      }
+    .content_navegation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
     }
-    .link_item_carrito {
-      text-decoration: none;
-      font-size: 0.75rem;
-      letter-spacing: 1.7px;
-      font-weight: 700;
-      cursor: pointer;
-      position: relative;
-      &:not(:first-child) {
-        margin-left: 16px;
-      }
 
-      .icon_numero {
-        position: absolute;
-        background-color: rgb(11, 193, 74);
+    .navigation_links {
+      display: flex;
+
+      .link_item {
+        text-decoration: none;
+        font-size: 0.75rem;
+        letter-spacing: 1.7px;
+        font-weight: 700;
         color: white;
-        height: 20px;
-        width: 20px;
-        border-radius: 50%;
-        display: grid;
-        place-items: center;
-        top: -10px;
-        right: -14px;
-        font-size: 10px;
+        //   text-transform: uppercase;
+        &:not(:first-child) {
+          margin-left: 18px;
+        }
+      }
+    }
+    .navigation03 {
+      display: flex;
+      align-items: center;
+
+      @media screen and (max-width: 690px) {
+        display: none;
+      }
+
+      .icon_item {
+        font-size: 23px;
+        cursor: pointer;
+        color: white;
+        &:not(:first-child) {
+          margin-left: 24px;
+        }
+      }
+
+      .link_item {
+        text-decoration: none;
+        font-size: 0.75rem;
+        letter-spacing: 1.7px;
+        font-weight: 700;
+        color: white;
+        cursor: pointer;
+        //   text-transform: uppercase;
+        &:not(:first-child) {
+          margin-left: 20px;
+        }
+      }
+      .link_item_carrito {
+        text-decoration: none;
+        font-size: 0.75rem;
+        letter-spacing: 1.7px;
+        font-weight: 700;
+        cursor: pointer;
+        position: relative;
+        &:not(:first-child) {
+          margin-left: 16px;
+        }
+
+        .icon_numero {
+          position: absolute;
+          background-color: rgb(11, 193, 74);
+          color: white;
+          height: 20px;
+          width: 20px;
+          border-radius: 50%;
+          display: grid;
+          place-items: center;
+          top: -10px;
+          right: -14px;
+          font-size: 10px;
+        }
       }
     }
   }
 }
 
 
+.header_position {
+  position: fixed;
+  background-color: transparent;
+  backdrop-filter: blur(0px);
 }
-
+.header_bg_scroll {
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(15px);
+}
