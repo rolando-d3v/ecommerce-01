@@ -3,17 +3,19 @@ import { Route, Routes, Navigate, useLocation, Outlet } from "react-router-dom";
 import { useSelector } from "react-redux";
 import LayoutPagos from "../pages_user/pagos/LayoutPagos";
 import LayoutUser from "../pages_user/user/LayoutUser";
-import Navigator from "../layoutHome/navigator_home/Navigator";
-import LayoutHome from "../pages/home/layout/LayoutHome";
-import LayoutHombre from "../pages/page_hombre/layout/LayoutHombre";
-import LayoutLogin from "../pages/login/layout/LayoutLogin";
-import LayoutMujer from "../pages/page_mujer/layout/LayoutMujer";
-import LayoutNinos from "../pages/page_ninos/layout/LayoutNinos";
-import LayoutCarrito from "../pages/pages_carrito/layout_car/LayoutCarrito";
-import { PrivateRouteUser } from "./PrivateRoute";
-import Footer from "../layoutHome/footer_page/Footer";
 
-export default function HomeRouter() {
+import LayoutHome from "../pages_home/home/layout/LayoutHome";
+import LayoutHombre from "../pages_home/page_hombre/layout/LayoutHombre";
+import LayoutLogin from "../pages_home/login/layout/LayoutLogin";
+import LayoutMujer from "../pages_home/page_mujer/layout/LayoutMujer";
+import LayoutCarrito from "../pages_home/pages_carrito/layout_car/LayoutCarrito";
+
+import { PrivateRouteUser } from "./PrivateRoute";
+
+import Footer from "../layout_home/footer_page/Footer";
+import Navigator from "../layout_home/navigator_home/Navigator";
+
+export default function RouterHome() {
   // const { estado_sidebar, isDarkMode } = useSelector(
   //   (state) => state.baseStyle
   // );
@@ -35,7 +37,6 @@ export default function HomeRouter() {
         <Route path="/login" element={<LayoutLogin />} />
         <Route path="/hombre" element={<LayoutHombre />} />
         <Route path="/mujer" element={<LayoutMujer />} />
-        <Route path="/ninos" element={<LayoutNinos />} />
         <Route path="/carrito" element={<LayoutCarrito />} />
 
         <Route

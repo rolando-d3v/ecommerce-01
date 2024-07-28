@@ -1,5 +1,12 @@
 .content_body {
-  height: 100px;
+  height: 90px;
+  border: 1px solid black;
+  
+  td {
+    border-bottom: 1px solid rgb(134, 132, 132);
+  }
+  
+ 
 }
 
 .descripcion {
@@ -22,6 +29,8 @@
 }
 .price {
   text-align: center;
+  font-weight: 400;
+  color: #000;
 }
 .cantidad {
   text-align: center;
@@ -55,7 +64,16 @@
     -webkit-appearance: none;
     margin: 0;
   }
+
 }
+
+.subtotal {
+  text-align: center;
+  font-weight: 400;
+  color: #200659;
+  min-width: 80px;
+}
+
 .accion {
   text-align: center;
 

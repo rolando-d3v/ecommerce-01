@@ -1,0 +1,12 @@
+.aside {
+  padding: 60px 0;
+  grid-area: SIDEBAR;
+  
+  .content_aside {
+    border-radius: 6px 10px;
+    border: 1px solid #949292;
+    padding: 10px;
+    height: 600px;
+    background-color: rgb(236, 236, 240);
+  }
+}

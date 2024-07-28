@@ -37,7 +37,7 @@ export default function ProductoItem({ data }) {
       <div className={css.footer}>
         <article className={css.data_producto}>
           <p className={css.marca}>{data.author}</p>
-          <span className={css.price}>{data.price}$</span>
+          <span className={css.price}> S/ {data.price}</span>
         </article>
         <button onClick={agregarCarrito} className={css.btn_add}>
           Agregar al Carrito

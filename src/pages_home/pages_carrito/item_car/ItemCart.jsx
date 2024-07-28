@@ -34,7 +34,7 @@ export default function ItemCart({ data }) {
         </div>
       </td>
 
-      <td className={css.price}>{data.price}$</td>
+      <td className={css.price}> S/ {data.price} </td>
 
       <td className={css.cantidad}>
         <div className="d-flex align-items-center justify-content-center">
@@ -63,8 +63,8 @@ export default function ItemCart({ data }) {
         </div>
       </td>
 
-      <td className={css.price} style={{ fontWeight: "bold" }}>
-        {totalPrice}$
+      <td className={css.subtotal} >
+        S/ {totalPrice}
       </td>
       <td className={css.accion}>
         <button className={css.btn_delete} onClick={handleRemove}>

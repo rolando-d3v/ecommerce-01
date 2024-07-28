@@ -2,26 +2,12 @@ import React from "react";
 import css from "./layout.module.scss";
 import { useSelector } from "react-redux";
 import ItemCart from "../item_car/ItemCart";
-import { useNavigate } from "react-router-dom";
+import SendPago from "../send_pago/SendPago";
 
 export default function LayoutCarrito() {
   const cart = useSelector((state) => state.CART_APP);
 
-  const { auth, roles_user } = useSelector((state) => state.USER_AUTH);
-
   console.log(cart);
-
-  const navigate = useNavigate();
-
-  const pagar = () => {
-    console.log("pagos");
-
-    if (!auth) {
-      navigate("/login");
-    }
-
-    navigate("/user/pagos");
-  };
 
   return (
     <div className={css.layout_carrito}>
@@ -30,11 +16,11 @@ export default function LayoutCarrito() {
           <table className={css.table_com}>
             <thead className={css.table_head}>
               <tr>
-                <th>Descripcion</th>
-                <th>Precio</th>
-                <th>Cantidad</th>
-                <th>Total</th>
-                <th>Accion</th>
+                <th className={css.th_head}>Descripcion</th>
+                <th className={css.th_head}>Precio</th>
+                <th className={css.th_head}>Cantidad</th>
+                <th className={css.th_head}>Sub total</th>
+                <th className={css.th_head}>Accion</th>
               </tr>
             </thead>
             <tbody className={css.table_body}>
@@ -43,7 +29,7 @@ export default function LayoutCarrito() {
               })}
               <tr className={css.total_price}>
                 <td colSpan={3}>Total:</td>
-                <td colSpan={1}>{cart?.total}$</td>
+                <td colSpan={1}> S/ {cart?.total} </td>
                 <td></td>
               </tr>
             </tbody>
@@ -55,7 +41,7 @@ export default function LayoutCarrito() {
         )}
       </section>
 
-      <aside className={css.aside}>
+      {/* <aside className={css.aside}>
         <article className={css.content_aside}>
           <h4>Realizar Pagos</h4>
           <button type="button" onClick={pagar}>
@@ -63,7 +49,9 @@ export default function LayoutCarrito() {
             Pagar{" "}
           </button>
         </article>
-      </aside>
+      </aside> */}
+
+      <SendPago />
     </div>
   );
 }

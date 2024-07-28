@@ -15,21 +15,9 @@ export const PrivateRouteUser = ({ children }) => {
 
 
 
-
 export const PrivateRouteAdmin = ({ children }) => {
   const { auth, roles_user } = useSelector((state) => state.USER_AUTH);
-
   console.log(auth, roles_user);
-
-  // if (!auth) {
-  //   return <Navigate to="/login" replace />;
-  // }
-  // if (!roles_user.includes("admin")) {
-  //   return <Navigate to="home" replace />;
-  // }
-
-
-
   const isAuth = !!auth && roles_user.includes("admin");
   console.log(isAuth);
   if (!isAuth) {

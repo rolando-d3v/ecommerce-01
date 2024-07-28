@@ -4,48 +4,48 @@
         "name": "Men's Tree Dasher 2",
         "author": "Allbird",
         "imageUrl": "/hombre/man01.png",
-        "price": "54"
+        "price": "160.50"
     },
     {
         "id": 2,
         "name": "Men's Trail Runner SWT Mizzles",
         "author": "Allbird",
         "imageUrl": "/hombre/man02.png",
-        "price": "53"
+        "price": "99.00"
     },
     {
         "id": 3,
         "name": "Men's Wool Dasher Mizzles",
         "author": "Allbird",
         "imageUrl": "/hombre/man03.png",
-        "price": "62"
+        "price": "62.00"
     },
     {
         "id": 4,
         "name": "Men's Trail Runner SWT Mizzles",
         "author": "Nike",
         "imageUrl": "/hombre/man04.png",
-        "price": "45"
+        "price": "250.00"
     },
     {
         "id": 5,
         "name": "Men's Trail Runner SWT Mizzles",
         "author": "Allbird",
         "imageUrl": "/hombre/man05.png",
-        "price": "48"
+        "price": "95.00"
     },
     {
         "id": 6,
         "name": "Men's Trail Runner SWT Mizzles",
         "author": "Allbird",
         "imageUrl": "/hombre/man06.png",
-        "price": "58"
+        "price": "156.00"
     },
     {
         "id": 7,
         "name": "Men's Trail Runner SWT Mizzles",
         "author": "Allbird",
         "imageUrl": "/hombre/man07.png",
-        "price": "86"
+        "price": "86.00"
     }
 ]

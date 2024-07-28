@@ -9,7 +9,7 @@ import { xlogin_false } from "../../Redux/usuarioAuthSlice";
 const list01 = [
   { id: 1, name: "HOMBRE", url: "/hombre" },
   { id: 2, name: "MUJER", url: "/mujer" },
-  { id: 3, name: "NIÑOS", url: "/ninos" },
+
   // { id: 4, name: "VENTAS", url: "/ventas" },
 ];
 

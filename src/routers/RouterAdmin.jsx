@@ -7,7 +7,7 @@ import LayoutProductos from "../pages_admin/productos/LayoutProductos";
 
 
 
-export default function AdminHomeRouter() {
+export default function RouterAdmin() {
 
   return (
     <div
