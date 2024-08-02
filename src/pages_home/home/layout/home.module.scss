@@ -1,18 +1,24 @@
 .home {
   width: 100%;
   background-color: var(--color-secundario01);
+  max-width: 1300px;
 }
 
 .content_img {
   width: 100%;
-  // position: absolute;
-  // top: 0px;
-
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 100vw;
+  // left: 0px;
+  
+  
   
   .div_img {
-    min-height: 400px;
-    height: 70vh;
+    height: 600px;
+    // height: 70vh;
     .item_img {
+      // width: 100%;
       // width: 100%;
       // min-height: 50%;
       // max-height: 800px;

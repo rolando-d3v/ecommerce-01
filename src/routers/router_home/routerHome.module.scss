@@ -1,0 +1,16 @@
+.theme {
+    height: 100vh;
+    
+    display: grid;
+    grid-template-rows: 60px 1fr auto;
+
+    
+    
+    .diva {
+        width: 100%;
+        margin: 0 auto;
+        // background-color: red !important;
+        // width: 100%;
+        max-width: var(--desktop-lg);
+    }
+}

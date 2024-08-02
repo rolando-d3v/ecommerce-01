@@ -1,35 +1,35 @@
-import { useEffect, useState } from "react";
-import { Route, Routes, Navigate } from "react-router-dom";
-import { useSelector } from "react-redux";
-// import { motion } from "framer-motion";
-// import css from "./homeRouter.module.scss";
-import LayoutProductos from "../pages_admin/productos/LayoutProductos";
+// import { useEffect, useState } from "react";
+// import { Route, Routes, Navigate } from "react-router-dom";
+// import { useSelector } from "react-redux";
+// // import { motion } from "framer-motion";
+// // import css from "./homeRouter.module.scss";
+// import LayoutProductos from "../pages_admin/productos/LayoutProductos";
 
 
 
-export default function RouterAdmin() {
+// export default function RouterAdmin() {
 
-  return (
-    <div
+//   return (
+//     <div
     
-      // className={`${css.homeRoter_principal} 
-      //  ${isDarkMode ? css.principalDark : css.principalDia} `}
-    >
+//       // className={`${css.homeRoter_principal} 
+//       //  ${isDarkMode ? css.principalDark : css.principalDia} `}
+//     >
 
-      <div>
-        hola Admin
-      </div>
+//       <div>
+//         hola Admin
+//       </div>
 
-       <Routes>
-          <Route path="/productos" element={<LayoutProductos />} />
-          {/* <Route path="/user" element={<LayoutUser />} /> */}
-        </Routes>
+//        <Routes>
+//           <Route path="/productos" element={<LayoutProductos />} />
+//           {/* <Route path="/user" element={<LayoutUser />} /> */}
+//         </Routes>
    
 
   
      
-    </div>
-  );
-}
+//     </div>
+//   );
+// }
 
 

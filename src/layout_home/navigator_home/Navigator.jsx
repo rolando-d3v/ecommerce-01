@@ -7,8 +7,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { xlogin_false } from "../../Redux/usuarioAuthSlice";
 
 const list01 = [
-  { id: 1, name: "HOMBRE", url: "/hombre" },
-  { id: 2, name: "MUJER", url: "/mujer" },
+  { id: 1, name: "Tecnologia", url: "/Tecnologia" },
+  { id: 2, name: "Comida", url: "/comida" },
+  { id: 2, name: "Electrohogar", url: "/electrohogar" },
+  { id: 2, name: "Calzado", url: "/calzado" },
 
   // { id: 4, name: "VENTAS", url: "/ventas" },
 ];

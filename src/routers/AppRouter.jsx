@@ -2,8 +2,8 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { PrivateRouteAdmin } from "./PrivateRoute";
-import RouterHome from "./RouterHome";
-import RouterAdmin from "./RouterAdmin";
+import RouterAdmin from "./router_admin/RouterAdmin";
+import RouterHome from "./router_home/RouterHome";
 
 export default function AppRouter() {
   return (

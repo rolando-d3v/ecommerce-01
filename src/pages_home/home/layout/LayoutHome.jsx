@@ -22,6 +22,8 @@ const arrayImg = [
 export default function LayoutHome() {
   return (
     <section className={css.home}>
+
+      
       <article className={css.content_img}>
         <Swiper
           className={css.div_img}
@@ -49,7 +51,7 @@ export default function LayoutHome() {
           })}
         </Swiper>
       </article>
-
+ 
       <PromocionesAll/>
       <PromocionesId/>
     </section>
