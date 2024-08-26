@@ -1,19 +1,4 @@
-.layout_hombre {
-  max-width: 1300px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-areas: "ASIDE  CONTENT";
-  grid-template-columns: 311px 1fr;
-  
-  
-  @media screen and (max-width: 690px) {
-    display: grid;
-    grid-template-areas: "CONTENT";
-    grid-template-columns: 1fr;
-  
-    
-  }
-}
+
 
 .aside {
   grid-area: ASIDE;
@@ -52,12 +37,3 @@
   }
 }
 
-.content {
-  padding: 60px 0;
-  grid-area: CONTENT;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  justify-content: center;
-  gap: 14px;
-
-}

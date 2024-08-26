@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function LayoutProductos() {
+export default function LayoutUsuariosAdmin() {
   return (
     <div>LayoutProductos</div>
   )

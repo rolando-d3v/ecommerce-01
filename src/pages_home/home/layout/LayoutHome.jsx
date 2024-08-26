@@ -11,6 +11,7 @@ import "swiper/css/pagination";
 import { Navigation, Pagination, History, Autoplay } from "swiper/modules";
 import PromocionesAll from "../promociones_all/PromocionesAll";
 import PromocionesId from "../promociones_id/PromocionesId";
+import Footer from "../footer/Footer";
 
 const arrayImg = [
   { id: 1, img: wall01 },
@@ -24,7 +25,7 @@ export default function LayoutHome() {
     <section className={css.home}>
 
       
-      <article className={css.content_img}>
+      <article className={css.content_corousel}>
         <Swiper
           className={css.div_img}
           spaceBetween={50}
@@ -54,6 +55,8 @@ export default function LayoutHome() {
  
       <PromocionesAll/>
       <PromocionesId/>
+      <Footer
+      />
     </section>
   );
 }

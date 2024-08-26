@@ -1,0 +1,49 @@
+.footer {
+  background: #000;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  > div {
+    width: 100%;
+    max-width: var(--desktop-lg);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 250px 36px;
+    grid-template-areas:
+      "CONT CONT"
+      "FOOT FOOT";
+
+    .content_footer {
+      grid-area: CONT;
+      display: flex;
+      width: 100%;
+      align-items: center;
+
+      .div_link {
+        width: 100%;
+        padding: 20px 0px 10px 0px;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+
+        .link {
+          display: flex;
+          gap: 30px;
+          .item {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+    }
+    .item_footer {
+      grid-area: FOOT;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

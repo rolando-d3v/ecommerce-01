@@ -9,12 +9,9 @@ import LayoutHome from "../../pages_home/home/layout/LayoutHome";
 import LayoutLogin from "../../pages_home/login/layout/LayoutLogin";
 import LayoutCarrito from "../../pages_home/pages_carrito/layout_car/LayoutCarrito";
 
-import LayoutHombre from "../../pages_home/page_hombre/layout/LayoutHombre";
-
 import { PrivateRouteUser } from "../PrivateRoute";
-
-import Footer from "../../layout_home/footer_page/Footer";
 import Navigator from "../../layout_home/navigator_home/Navigator";
+import LayoutProducto from "../../pages_home/page_producto/layout/LayoutProducto";
 
 export default function RouterHome() {
   // const { estado_sidebar, isDarkMode } = useSelector(
@@ -28,8 +25,7 @@ export default function RouterHome() {
       // transition={{ duration: 0.2 }}
       className={`${x.theme} `}
     >
-      {/* <HeadNavegador />
-      <SidebarCentroM /> */}
+    
       <Navigator />
       <div className={x.diva}>
         <Routes>
@@ -38,7 +34,7 @@ export default function RouterHome() {
           <Route path="/login" element={<LayoutLogin />} />
           <Route path="/carrito" element={<LayoutCarrito />} />
 
-          <Route path="/tecnologia" element={<LayoutHombre />} />
+          <Route path="/seccion/:id" element={<LayoutProducto />} />
 
           <Route
             path="/user/*"
@@ -53,7 +49,7 @@ export default function RouterHome() {
         </Routes>
       </div>
 
-      <Footer />
+ 
     </div>
   );
 }

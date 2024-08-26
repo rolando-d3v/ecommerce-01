@@ -5,7 +5,8 @@ import { useSelector } from "react-redux";
 export const PrivateRouteUser = ({ children }) => {
   const { auth, roles_user } = useSelector((state) => state.USER_AUTH);
 
-  const isAuth = !!auth && roles_user.includes("user");
+  const isAuth = !!auth && roles_user.includes(1);
+  // const isAuth = !!auth && roles_user.includes("user");
   console.log(isAuth);
   if (!isAuth) {
     return <Navigate to="/login" replace />;
@@ -18,7 +19,8 @@ export const PrivateRouteUser = ({ children }) => {
 export const PrivateRouteAdmin = ({ children }) => {
   const { auth, roles_user } = useSelector((state) => state.USER_AUTH);
   console.log(auth, roles_user);
-  const isAuth = !!auth && roles_user.includes("admin");
+  const isAuth = !!auth && roles_user.includes(2);
+  // const isAuth = !!auth && roles_user.includes("admin");
   console.log(isAuth);
   if (!isAuth) {
     return <Navigate to="/home" replace />;

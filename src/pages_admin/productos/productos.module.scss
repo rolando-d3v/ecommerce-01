@@ -1,0 +1,82 @@
+.producto {
+  padding: 20px;
+  width: 100%;
+
+  .title {
+    padding: 20px 0;
+  }
+}
+
+.content_form {
+  width: 100%;
+
+  .div_nombre {
+    gap: 10px;
+    display: flex;
+    width: 100%;
+  }
+}
+
+.box {
+  background: #f6f4f4;
+  padding: 14px 14px 8px 14px;
+  padding-top : 0.5rem;
+  border-radius: 0.55rem;
+  border: 1px solid #939393;
+  width: 100%;
+}
+
+.descripcion {
+  margin: 10px 0;
+}
+
+
+.input__wrapper {
+  position: relative;
+  padding: 1rem 0 0;
+}
+
+.input__field {
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #6f7e8c;
+  outline: 0;
+  font-size: 1rem;
+  color: var(--text);
+  padding: 0.25rem 0px;
+  padding-right: 2rem;
+
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.input__field::placeholder {
+  color: transparent;
+}
+
+.input__field:placeholder-shown ~ .input__label {
+  font-size: 1rem;
+  cursor: text;
+  color: #6f7e8c;
+  top: 1.25rem;
+}
+
+label,
+.input__field:focus ~ .input__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  font-size: 0.875rem;
+  left: -0.0625rem;
+  color: #6f7e8c;
+  transition: 0.3s;
+  text-transform: capitalize;
+}
+
+.input__field:focus ~ .input__label {
+  color: #007fff;
+}
+
+.input__field:focus {
+  border-bottom: 2px solid #007fff;
+}

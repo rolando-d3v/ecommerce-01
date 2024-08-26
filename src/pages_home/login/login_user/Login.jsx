@@ -11,9 +11,55 @@ import {
   xroles_user,
 } from "../../../Redux/usuarioAuthSlice";
 import { useNavigate } from "react-router-dom";
+import { authLogin } from "../../../api_ecommerce/apiAuthLogin";
+import { useMutation } from "@tanstack/react-query";
+import { API_ECO } from "../../../api_ecommerce/apiRest";
+import axios from "axios";
 
 export default function Login() {
   const navigate = useNavigate();
+
+  // ? LOGIN AUTH ****************************************
+  const mutationLogin = useMutation({
+    mutationFn: authLogin,
+    // onSuccess: () => {
+    //   queryClient.invalidateQueries("registro_externo_actual");
+    // },
+    onSuccess: async (data) => {
+      sessionStorage.setItem("TK_ECO", JSON.stringify(data.token));
+      dispatch(xlogin_true(true));
+      console.log(data);
+      
+      const dataPersona = await axios.get(`${API_ECO}/user/role/${data.uuid} `);
+      
+      console.log(dataPersona.data);
+      console.log(dataPersona.data.role_id);
+      
+      dispatch(xroles_user([dataPersona.data.role_id]));
+      dispatch(xpersonal(dataPersona.data));
+
+      
+
+      toast("Login", {
+        className: "my-classname",
+        description: "Exitoso",
+        duration: 1500,
+        position: "top-center",
+        style: {
+          background: "#000",
+          color: "white",
+        },
+        // icon: <MyIcon />,
+      });
+      
+        dataPersona.data.role_id === 2
+          ? navigate("/admin/productos")
+          : navigate("/user/pagos");
+    },
+    onError: (error) => {
+      console.log(error);
+    },
+  });
 
   const schema = z.object({
     email: z
@@ -44,36 +90,9 @@ export default function Login() {
   const dispatch = useDispatch();
 
   const enviarData = (data) => {
-    // const role = "user";
-
+    mutationLogin.mutate(data);
     console.log(data.role);
     console.log(data);
-
-    sessionStorage.setItem("TK_ECO", JSON.stringify(data));
-
-    dispatch(xlogin_true(true));
-    dispatch(xpersonal(data));
-    dispatch(xroles_user([`${data.role}`]));
-
-
-
-    toast("Login", {
-      className: "my-classname",
-      description: "Exitoso",
-      duration: 1500,
-      position: "top-center",
-      style: {
-        background: "#000",
-        color: "white",
-      },
-      // icon: <MyIcon />,
-    });
-
-    {
-      data.role === "admin"
-        ? navigate("/admin/productos")
-        : navigate("/user/pagos");
-    }
   };
 
   return (

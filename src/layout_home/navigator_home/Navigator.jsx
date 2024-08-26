@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import css from "./Navigator.module.scss";
+import ListSeccion from "../list_seccion/ListaSeccion";
 import logo from "../../assets/logo/logo_eco.png";
 import * as FaIcons from "react-icons/fa6";
 import { Link, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { xlogin_false } from "../../Redux/usuarioAuthSlice";
+import { useAllSeccion } from "../../api_ecommerce/apiSeccion";
 
 const list01 = [
   { id: 1, name: "Tecnologia", url: "/Tecnologia" },
@@ -31,8 +33,8 @@ export default function Navigator() {
 
   let location = useLocation();
 
-  console.log(location);
-  console.log(color);
+  // console.log(location);
+  // console.log(color);
 
   React.useEffect(() => {
     if (location?.pathname === "/home" || location?.pathname === "/"  ) {
@@ -47,11 +49,24 @@ export default function Navigator() {
   const { list } = useSelector((state) => state.CART_APP);
   const dispatch = useDispatch();
 
-  return (
-    <header
-      className={`${colorBg === true && css.header_bg_scroll}  ${
-        color === true && css.header_position
-      }       ${css.header}`}
+
+
+
+   const ALL_SECCION = useAllSeccion()
+
+
+  //  console.log(ALL_SECCION.data);
+   
+   
+   
+   
+   
+   return (
+     <header
+     className={`
+      ${colorBg === true && css.header_bg_scroll}
+      ${color === true && css.header_position
+}       ${css.header}`}
     >
       <div className={css.content_header}>
         <nav className={css.navigation_logo}>
@@ -62,13 +77,17 @@ export default function Navigator() {
 
         <div className={css.content_navegation}>
           <nav className={css.navigation_links}>
-            {list01.map((li, index) => {
+
+
+<ListSeccion  ALL_SECCION={ALL_SECCION}    />
+
+            {/* {list01.map((li, index) => {
               return (
                 <Link key={index} to={li.url} className={css.link_item}>
                   <span> {li.name} </span>
                 </Link>
               );
-            })}
+            })} */}
           </nav>
 
           <nav className={css.navigation03}>
