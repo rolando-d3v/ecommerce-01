@@ -53,8 +53,8 @@ export default function Login() {
       });
       
         dataPersona.data.role_id === 2
-          ? navigate("/admin/productos")
-          : navigate("/user/pagos");
+          ? navigate("/admin/producto")
+          : navigate("/pagos");
     },
     onError: (error) => {
       console.log(error);
@@ -90,6 +90,8 @@ export default function Login() {
   const dispatch = useDispatch();
 
   const enviarData = (data) => {
+    console.log(data);
+    
     mutationLogin.mutate(data);
     console.log(data.role);
     console.log(data);

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import pepe from "../../assets/logo/logo_eco23.png";
+// import pepe from "../../assets/logo/logo_eco23.png";
 import css from "./list_seccion.module.scss";
 
 export default function ListaSeccion({ ALL_SECCION }) {

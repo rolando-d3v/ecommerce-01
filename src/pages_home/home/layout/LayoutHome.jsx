@@ -55,8 +55,7 @@ export default function LayoutHome() {
  
       <PromocionesAll/>
       <PromocionesId/>
-      <Footer
-      />
+      {/* <Footer/> */}
     </section>
   );
 }
